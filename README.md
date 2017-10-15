@@ -1,5 +1,5 @@
 # Log Analysis
-
+Project that does queries based on a given database using Python's DB API
 
 ## Dependencies
 
@@ -41,16 +41,16 @@ cd /vagrant
 In your terminal type in:
 
 ```
-git clone https://github.com/arthurchan1111/catalog.git
+git clone https://github.com/arthurchan1111/log-analysis.git
 
 ```
-Or download the repository [here](https://github.com/arthurchan1111/catalog.git)
+Or download the repository [here](https://github.com/arthurchan1111/log-analysis.git)
 
 If using vagrant:
 
 Copy the files into catalog directory of the [Vagrant Config File](https://github.com/udacity/fullstack-nanodegree-vm)
 
-### Setup Database and views
+### Setup Database and Views
 
 1. Download the data [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
@@ -65,19 +65,17 @@ psql -d news -f newsdata.sql
 
 ```
 psql -d news -f viewnews.sql
-
 ```
 
-... or
+    **or**
 
-... Connect to the database with:
+    Connect to the database with:
 
- ```
+```
 psql -d news
-
 ```
 
-... Then copy and paste these directly into the terminal window:
+    Then copy and paste these directly into the terminal window:
 
 ```
 CREATE VIEW article_view AS
@@ -85,7 +83,6 @@ SELECT path, COUNT(status) AS views
 FROM log
 WHERE log.status = '200 OK' AND log.path::text LIKE '/article%'
 GROUP BY path;
-
 ```
 
 ```
@@ -93,7 +90,6 @@ CREATE VIEW authors_by_title AS
 SELECT articles.title, authors.name, articles.slug
 FROM articles, authors
 WHERE articles.author = authors.id;
-
 ```
 
 ### Startup
@@ -102,5 +98,4 @@ WHERE articles.author = authors.id;
 
 ```
 python news.py
-
 ```
