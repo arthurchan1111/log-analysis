@@ -67,15 +67,15 @@ psql -d news -f newsdata.sql
 psql -d news -f viewnews.sql
 ```
 
-    **or**
+**or**
 
-    Connect to the database with:
+Connect to the database with:
 
 ```
 psql -d news
 ```
 
-    Then copy and paste these directly into the terminal window:
+Then copy and paste these directly into the terminal window:
 
 ```
 CREATE VIEW article_view AS
