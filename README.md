@@ -3,7 +3,7 @@ Project that does queries based on a given database using Python's DB API
 
 ## Dependencies
 
-[Python 2.7.14](https://www.python.org/downloads/)
+[Python 2.7.12](https://www.python.org/downloads/)
 
 [Postgresql](https://www.postgresql.org/download/)
 
